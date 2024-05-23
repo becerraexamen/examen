@@ -1,5 +1,6 @@
 import { pool } from "../tools/db.js";
-
+import { config } from "dotenv";
+config();
 export class PagoController {
     static getAll = async(req, res) => {
         try {
@@ -17,6 +18,39 @@ export class PagoController {
                 res.status(404).json({error: "Pago no encontrado"})
             } else {
                 res.status(200).json(result);
+            }
+        } catch (error) {
+            res.status(500).json({error: error})
+        }
+    }
+    static create = async(req, res) => {
+        const input = req.body;
+        const {
+            valor
+        } = input
+        try {
+            const [result] = await pool.query("INSERT INTO `pago`(`valor`) VALUES (?)", [valor]);
+            if (result.affectedRows === 0) {
+                res.status(400).json({error: "Error en la inserción"})
+            } else {
+                res.status(201).json(result);
+            }
+        } catch (error) {
+            res.status(500).json({error: error})
+        }
+    }
+    static update = async(req, res) => {
+        const {id} = req.params;
+        const input = req.body;
+        const {
+            valor
+        } = input
+        try {
+            const [result] = await pool.query("UPDATE `pago` SET `valor`='?' WHERE id = ?", [valor, id]);
+            if (result.affectedRows === 0) {
+                res.status(400).json({error: "Error en la inserción"})
+            } else {
+                res.status(201).json({message: "Pago modificado"});
             }
         } catch (error) {
             res.status(500).json({error: error})

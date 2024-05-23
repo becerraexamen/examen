@@ -1,0 +1,81 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "examen",
+    "collectionId": "ec531cc3-6538-4863-b7da-2e288713850e",
+    "dateExported": "2024-05-23T13:36:01.804Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "b7f37bb6-e1ba-48d9-8cbc-6385245b5517",
+            "colId": "ec531cc3-6538-4863-b7da-2e288713850e",
+            "containerId": "",
+            "name": "get all",
+            "url": "http://localhost:3000/pago",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-05-23T13:00:02.922Z",
+            "modified": "2024-05-23T13:00:14.496Z",
+            "headers": []
+        },
+        {
+            "_id": "23cb91a9-ad8a-4fbc-9bcc-6060e0811cbc",
+            "colId": "ec531cc3-6538-4863-b7da-2e288713850e",
+            "containerId": "",
+            "name": "get by id",
+            "url": "http://localhost:3000/pago/2",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-05-23T13:02:57.540Z",
+            "modified": "2024-05-23T13:35:40.604Z",
+            "headers": []
+        },
+        {
+            "_id": "7476408a-2140-4efa-92ba-efb6789bb19c",
+            "colId": "ec531cc3-6538-4863-b7da-2e288713850e",
+            "containerId": "",
+            "name": "delete",
+            "url": "http://localhost:3000/pago/3",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-05-23T13:25:02.681Z",
+            "modified": "2024-05-23T13:35:48.737Z",
+            "headers": []
+        },
+        {
+            "_id": "8204a5bf-6559-4237-a416-f1895c9b41da",
+            "colId": "ec531cc3-6538-4863-b7da-2e288713850e",
+            "containerId": "",
+            "name": "create",
+            "url": "http://localhost:3000/pago",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-05-23T13:25:23.108Z",
+            "modified": "2024-05-23T13:25:44.756Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"valor\": 4000\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "ee3daf69-6ada-4c8e-8852-add01b2e0f4b",
+            "colId": "ec531cc3-6538-4863-b7da-2e288713850e",
+            "containerId": "",
+            "name": "update",
+            "url": "http://localhost:3000/pago/2",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-05-23T13:31:32.554Z",
+            "modified": "2024-05-23T13:32:50.197Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"valor\": 3333\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "2YZhx3o7SJ_zjK7qLgyebV9XOJHX9A8FamkmZFkIfLU77aefB5Fh32QxpF3-n4yXR7hssdG2pRbZYzwMV2cQug"
+}
